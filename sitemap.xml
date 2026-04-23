@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://buxiaoyao.github.io/2026/04/23/onlyoffice%E6%8F%92%E4%BB%B6%E9%83%A8%E7%BD%B2/</loc>
+    
+    <lastmod>2026-04-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://buxiaoyao.github.io/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2026-04-23</lastmod>

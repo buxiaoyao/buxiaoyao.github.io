@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://buxiaoyao.github.io/2026/04/22/%E6%9F%90%E4%B9%A6%E4%B8%AD%E6%9C%9F%E8%B4%A71%E5%B0%8F%E6%97%B6%E5%9B%BE%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2026-04-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://buxiaoyao.github.io/2026/04/21/hexo%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</loc>
+    
+    <lastmod>2026-04-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://buxiaoyao.github.io/2026/04/23/onlyoffice%E6%8F%92%E4%BB%B6%E9%83%A8%E7%BD%B2/</loc>
     
     <lastmod>2026-04-23</lastmod>
@@ -19,24 +37,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://buxiaoyao.github.io/2026/04/22/%E6%9F%90%E4%B9%A6%E4%B8%AD%E6%9C%9F%E8%B4%A71%E5%B0%8F%E6%97%B6%E5%9B%BE%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2026-04-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://buxiaoyao.github.io/2026/04/21/hexo%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</loc>
-    
-    <lastmod>2026-04-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://buxiaoyao.github.io/</loc>
@@ -45,6 +45,27 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://buxiaoyao.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buxiaoyao.github.io/tags/%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buxiaoyao.github.io/tags/%E6%9C%9F%E8%B4%A7%E4%BA%A4%E6%98%93/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   

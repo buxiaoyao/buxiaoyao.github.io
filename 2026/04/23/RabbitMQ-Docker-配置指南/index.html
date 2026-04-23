@@ -28,13 +28,14 @@
 <meta property="og:description" content="RabbitMQ Docker 配置指南本指南记录了在 RabbitMQ 容器中进行虚拟主机（vhost）管理、用户创建、权限配置及管理的常用命令。 1. 创建虚拟主机 (vhost)通过 rabbitmqctl 创建不同环境的虚拟主机： 1234# 创建虚拟主机docker exec -it rabbitmq rabbitmqctl add_vhost dev_vhostdocker exec">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-23T02:32:34.000Z">
-<meta property="article:modified_time" content="2026-04-23T02:36:28.327Z">
+<meta property="article:modified_time" content="2026-04-23T02:48:55.823Z">
 <meta property="article:author" content="吹万不同">
+<meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
   
   
   
-  
+  <meta name="keywords" content="技术">
 
   <!-- feed -->
   
@@ -46,7 +47,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"吹万不同","sameAs":[]},"dateCreated":"2026-04-23T10:32:34+08:00","dateModified":"2026-04-23T10:36:28+08:00","datePublished":"2026-04-23T10:32:34+08:00","description":"","headline":"RabbitMQ Docker 配置指南","mainEntityOfPage":{"@type":"WebPage","@id":"https://buxiaoyao.github.io/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"},"publisher":{"@type":"Organization","name":"吹万不同","sameAs":[]},"url":"https://buxiaoyao.github.io/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"吹万不同","sameAs":[]},"dateCreated":"2026-04-23T10:32:34+08:00","dateModified":"2026-04-23T10:48:55+08:00","datePublished":"2026-04-23T10:32:34+08:00","description":"","headline":"RabbitMQ Docker 配置指南","mainEntityOfPage":{"@type":"WebPage","@id":"https://buxiaoyao.github.io/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"},"publisher":{"@type":"Organization","name":"吹万不同","sameAs":[]},"url":"https://buxiaoyao.github.io/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/","keywords":"技术","image":[]}</script>
   
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -63,7 +64,7 @@
 
 
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/04/23/onlyoffice%E6%8F%92%E4%BB%B6%E9%83%A8%E7%BD%B2/"><span class="title">onlyoffice插件部署</span></a><a class="item title" href="/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"><span class="title">RabbitMQ Docker 配置指南</span></a><a class="item title" href="/2026/04/22/%E6%9F%90%E4%B9%A6%E4%B8%AD%E6%9C%9F%E8%B4%A71%E5%B0%8F%E6%97%B6%E5%9B%BE%E8%AE%B0%E5%BD%95/"><span class="title">某书中期货1小时图记录</span></a><a class="item title" href="/2026/04/21/hexo%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/"><span class="title">hexo使用文档</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/04/22/%E6%9F%90%E4%B9%A6%E4%B8%AD%E6%9C%9F%E8%B4%A71%E5%B0%8F%E6%97%B6%E5%9B%BE%E8%AE%B0%E5%BD%95/"><span class="title">某书中期货1小时图记录</span></a><a class="item title" href="/2026/04/21/hexo%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/"><span class="title">hexo使用文档</span></a><a class="item title" href="/2026/04/23/onlyoffice%E6%8F%92%E4%BB%B6%E9%83%A8%E7%BD%B2/"><span class="title">onlyoffice插件部署</span></a><a class="item title" href="/2026/04/23/RabbitMQ-Docker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"><span class="title">RabbitMQ Docker 配置指南</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -76,7 +77,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-04-23T02:32:34.000Z">2026-04-23</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-04-23T02:36:28.327Z">2026-04-23</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-04-23T02:32:34.000Z">2026-04-23</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-04-23T02:48:55.823Z">2026-04-23</time></span></div></div></div>
     
     <div class="bottom only-title">
       
